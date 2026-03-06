@@ -56,4 +56,14 @@ Ideal para estructuras de dos dimensiones (filas y columnas al mismo tiempo). El
 
 ---
 
-## 🔔 ¡Sig
+## 🔔 ¡Sigamos aprendiendo!
+
+Si este recurso te sirvió, no olvides:
+
+- ⭐ Darle una **estrella** a este repositorio.
+- 👤 Seguirme en GitHub.
+- 🎥 Suscribirte a [Bit & Vatio](https://www.youtube.com/channel/UCAiRUEt_WVPQRUFCLqK6nQQ) para más contenido de Python, Django y Web Dev.
+
+---
+
+&copy; 2026 **Bit & Vatio** - _Un bit a la vez._
