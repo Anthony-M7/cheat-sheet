@@ -40,7 +40,7 @@ Ideal para estructuras de dos dimensiones (filas y columnas al mismo tiempo). El
 
 ## 🛠️ Cómo usar este recurso
 
-1. **Clona el repo:** `git clone https://github.com/tu-usuario/nombre-del-repo.git`
+1. **Clona el repo:** `git clone https://github.com/Anthony-M7/cheat-sheet.git`
 2. **Abre el archivo `index.html`** en tu navegador para ver la guía interactiva.
 3. **Copia los snippets** de código directamente a tus proyectos de Django o Frontend.
 
