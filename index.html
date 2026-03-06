@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit & Vatio - CSS Cheat Sheet</title>
+    <style>
+        /* --- ESTILOS GENERALES (Reset & Tipografía) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Fondo muy oscuro, moderno */
+            color: #e0e0e0; /* Texto gris claro, descansa la vista */
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* --- PALETA DE COLORES MODERNA ---
+           Principal: #121212 (Fondo)
+           Secundario: #1e1e1e (Tarjetas/Contenedores)
+           Acento 1 (Cian): #00bcd4 (Para Flexbox)
+           Acento 2 (Naranja): #ff9800 (Para Grid)
+           Texto Resaltado: #ffffff
+           Bordes/Líneas: #333333
+        --- */
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #1e1e1e; /* Fondo de la tarjeta principal */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            overflow: hidden; /* Para bordes redondeados */
+        }
+
+        /* --- CABECERA (Header) --- */
+        .header {
+            background-color: #1a1a1a;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header .brand {
+            color: #ff9800; /* Naranja Bit & Vatio */
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #b0b0b0;
+        }
+
+        /* --- SECCIONES PRINCIPALES (Flexbox y Grid) --- */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas: Flexbox vs Grid */
+            gap: 2px; /* Línea divisoria fina */
+            background-color: #333; /* Color de la línea divisoria */
+        }
+
+        .cheat-block {
+            background-color: #1e1e1e;
+            padding: 40px;
+        }
+
+        .cheat-block h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Estilos específicos para Flexbox */
+        .flexbox-block h2 {
+            color: #00bcd4; /* Cian */
+        }
+
+        /* Estilos específicos para Grid */
+        .grid-block h2 {
+            color: #ff9800; /* Naranja */
+        }
+
+        /* Títulos de propiedades (p.ej. Activar, Ejes, etc.) */
+        h3 {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        /* Estilos de texto descriptivo */
+        p {
+            margin-bottom: 15px;
+            color: #cccccc;
+        }
+
+        /* --- ESTILOS DE CÓDIGO (Snippets) --- */
+        code, pre {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: #121212; /* Fondo del código */
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        pre {
+            display: block;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 3px solid;
+            overflow-x: auto; /* Scroll horizontal si es largo */
+        }
+
+        /* Color de borde para bloques de código */
+        .flexbox-block pre {
+            border-left-color: #00bcd4;
+        }
+
+        .grid-block pre {
+            border-left-color: #ff9800;
+        }
+
+        /* Resaltado de sintaxis básico */
+        .code-selector { color: #80cbc4; } /* Verde azulado */
+        .code-property { color: #f77669; } /* Rojo suave */
+        .code-value { color: #c3e88d; }    /* Verde lima */
+        .code-comment { color: #546e7a; font-style: italic;}
+
+        /* --- SECCIÓN REGLA DE ORO --- */
+        .golden-rule {
+            grid-column: 1 / -1; /* Ocupa todo el ancho */
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-top: 2px solid #333;
+            text-align: center;
+        }
+
+        .golden-rule h2 {
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .golden-rule h2::before {
+            content: '💡';
+        }
+
+        .golden-rule ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+        }
+
+        .golden-rule li {
+            background-color: #262626;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 1px solid #333;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        .golden-rule li strong {
+            color: #ff9800; /* Naranja resaltado */
+        }
+
+        /* --- PIE DE PÁGINA (Footer) --- */
+        .footer {
+            background-color: #121212;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+
+        .footer a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVE DESIG (Para móviles) --- */
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr; /* Una columna en móvil */
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .cheat-block {
+                padding: 25px;
+            }
+
+            .golden-rule ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="header">
+            <h1>⚡ CSS CHEAT SHEET</h1>
+            <p>Guía Rápida de <span class="brand">Bit & Vatio</span>: Flexbox vs Grid</p>
+        </header>
+
+        <div class="content-section">
+            
+            <section class="cheat-block flexbox-block">
+                <h2>🧩 FLEXBOX</h2>
+                <p><strong>El Contorsionista:</strong> Ideal para alinear elementos en una sola fila o columna (unidimensional).</p>
+                
+                <h3>1. Activar</h3>
+<pre>
+<span class="code-selector">.contenedor</span> {
+  <span class="code-property">display</span>: <span class="code-value">flex</span>;
+}</pre>
+
+                <h3>2. Ejes</h3>
+                <p>Define si es Fila o Columna.</p>
+<pre>
+<span class="code-property">flex-direction</span>: <span class="code-value">row</span> | <span class="code-value">column</span>;</pre>
+
+                <h3>3. Alineación Eje Principal</h3>
+                <p>Usa <code>justify-content</code>.</p>
+<pre>
+<span class="code-comment">/* centro, espacio entre, etc. */</span>
+<span class="code-property">justify-content</span>: <span class="code-value">center</span> | <span class="code-value">space-between</span>;</pre>
+
+                <h3>4. Alineación Eje Cruzado</h3>
+                <p>Usa <code>align-items</code>.</p>
+<pre>
+<span class="code-comment">/* estirar (stretch), centro */</span>
+<span class="code-property">align-items</span>: <span class="code-value">stretch</span> | <span class="code-value">center</span>;</pre>
+
+                <h3>5. Comportamiento</h3>
+<pre>
+<span class="code-comment">/* ¡Estírate! */</span>
+<span class="code-property">flex-grow</span>: <span class="code-value">1</span>;
+
+<span class="code-comment">/* Salta de línea si no cabes */</span>
+<span class="code-property">flex-wrap</span>: <span class="code-value">wrap</span>;</pre>
+            </section>
+
+            <section class="cheat-block grid-block">
+                <h2>📐 GRID</h2>
+                <p><strong>El Arquitecto:</strong> Ideal para estructuras complejas de dos dimensiones (filas + columnas).</p>
+
+                <h3>1. Activar</h3>
+<pre>
+<span class="code-selector">.pagina</span> {
+  <span class="code-property">display</span>: <span class="code-value">grid</span>;
+}</pre>
+
+                <h3>2. Definir la Red</h3>
+                <p>Usa <code>px</code>, <code>%</code> o la fracción <code>fr</code>.</p>
+<pre>
+<span class="code-comment">/* 3 columnas (la del medio doble) */</span>
+<span class="code-property">grid-template-columns</span>: <span class="code-value">1fr 2fr 1fr</span>;
+
+<span class="code-comment">/* Fila superior 100px, resto auto */</span>
+<span class="code-property">grid-template-rows</span>: <span class="code-value">100px auto</span>;</pre>
+
+                <h3>3. Mapa Visual</h3>
+<pre>
+<span class="code-comment">/* Dibuja tu layout con palabras */</span>
+<span class="code-property">grid-template-areas</span>:
+  <span class="code-value">"header header"</span>
+  <span class="code-value">"nav    main"</span>
+  <span class="code-value">"footer footer"</span>;</pre>
+
+                <h3>4. Espaciado (Gap)</h3>
+<pre>
+<span class="code-comment">/* Espacio "mágico" entre celdas */</span>
+<span class="code-property">gap</span>: <span class="code-value">20px</span>;</pre>
+
+                <h3>5. Ubicación Mágica</h3>
+<pre>
+<span class="code-comment">/* Ocupa de columna 1 a la 3 */</span>
+<span class="code-property">grid-column</span>: <span class="code-value">1 / 3</span>;</pre>
+            </section>
+
+            <footer class="golden-rule">
+                <h2>LA REGLA DE ORO DE BIT & VATIO</h2>
+                <ul>
+                    <li>¿Elementos en línea? ➡️ <strong>Flexbox</strong></li>
+                    <li>¿Esqueleto de la web? ➡️ <strong>Grid</strong></li>
+                    <li>¿Nivel Pro? ➡️ <strong>Flexbox</strong> *dentro* de <strong>Grid</strong></li>
+                </ul>
+            </footer>
+        </div>
+
+        <footer class="footer">
+            <p>Sigue aprendiendo en: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks (Flexbox)</a> | <a href="https://learncssgrid.com/" target="_blank">Learn CSS Grid</a></p>
+            <p>&copy; 2026 Bit & Vatio - Sigamos aprendiendo, un bit a la vez.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
